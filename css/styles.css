@@ -98,7 +98,7 @@ nav {
     height: 40px;
     width: 100%;
     margin: 0 auto;
-    background-color: #ededed;
+    background-color: rgb(240, 240, 240);
 }
 
 nav ul {
@@ -555,6 +555,27 @@ footer {
     width: calc(100vw - 2em);
     margin: 1em auto;
     border: 2px solid var(--gf-orange);
+}
+
+.back-to-top-wrap {
+    width: 80px;
+    height: 50px;
+    background-color: var(--gf-blue);
+    position: absolute;
+    left: calc(50% - 50px);
+    transform: translateY(-50px);
+    overflow: hidden;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    cursor: pointer;
+}
+
+.back-to-top-wrap object {
+    width: 100%;
+    height: 60%;
+    margin-top: 10px;
+    pointer-events: none;
+    
 }
 @media only screen and (max-width: 920px) {
     :root {
