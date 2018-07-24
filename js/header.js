@@ -20,5 +20,8 @@ $(document).ready(function () {
         $("#account-menu-wrap").toggle();
         $("#account-menu-control").toggleClass('highlight');
     });
+    $('.back-to-top-wrap').click(function () {
+    $('html,body').animate({scrollTop:0},500);
+    });
 });
 
