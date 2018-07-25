@@ -112,17 +112,20 @@ nav ul {
     padding: 0;
     font-weight: 600;
 }
-nav ul a {
+nav ul li {
     text-decoration: none;
     color: var(--gf-blue);
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
 }
-nav ul a:hover {
+nav ul li:hover {
     background-color: #fff;
 }
 
+nav ul li a {
+    color: var(--gf-blue);
+}
 #account-icon {
     width: 40px;
     height: 40px;
@@ -130,6 +133,10 @@ nav ul a:hover {
     background: url(/img/account-icon-01.svg) no-repeat center;
     background-size: 80%;
 }
+#last-li {
+    display: flex;
+}
+
 
 #account-menu-wrap {
     width: var(--column-width);
@@ -281,7 +288,8 @@ main {
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin: 0 0 40px; 0;
+    margin: 0 0 40px 0;
+    cursor: pointer;
 }
 
 .product-text-wrap {
@@ -519,6 +527,10 @@ footer {
     border-bottom: 2px solid;
     text-overflow: clip;
 }
+
+#m-nav ul:last-of-type {
+    border-bottom: 0;
+}
 #m-nav ul a {
     text-decoration: none;
     color: var(--gf-blue);
@@ -533,6 +545,7 @@ footer {
     text-overflow: clip;
     width: 300px;
 }
+
 #m-search {
     width: 100vw;
     position: fixed;
@@ -542,7 +555,6 @@ footer {
     z-index: 9;
     overflow: hidden;
     height: 0;
-    display: hidden;
     transition: height 0.1s linear;
 }
 
@@ -556,25 +568,57 @@ footer {
     margin: 1em auto;
     border: 2px solid var(--gf-orange);
 }
-
 .back-to-top-wrap {
     width: 80px;
     height: 50px;
-    background-color: var(--gf-blue);
     position: absolute;
     left: calc(50% - 50px);
     transform: translateY(-50px);
     overflow: hidden;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    cursor: pointer;
+  
 }
-
-.back-to-top-wrap object {
+.back-to-top {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    cursor: pointer;
+    background-color: var(--gf-blue);
+    position: absolute;
+    transform: translateY(10px);
+    
+}
+.back-to-top:hover {
+    transform: translateY(0px);
+}
+.back-to-top object {
     width: 100%;
     height: 60%;
     margin-top: 10px;
     pointer-events: none;
+    
+}
+@media only screen and (min-width: 1300px) {
+    :root {
+        --column-width: 1000px;
+    }
+    
+    #hero-image {
+        height: 450px;
+        margin-top: 40px;
+    }
+    
+    .product-wrap {
+        margin-right: 20px;
+    }
+    .product-wrap:nth-of-type(5) {
+        margin-right: 0px;
+    }
+    
+    .product-wrap:nth-of-type(9) {
+        margin-right: 0px;
+    }
+    
     
 }
 @media only screen and (max-width: 920px) {
@@ -653,6 +697,7 @@ footer {
         background-image: url(/img/logo-m-footer-01.svg);
         height: 60px;
         background-size: contain;
+        background-position: center;
         width: 100%;
     }
     
@@ -671,7 +716,6 @@ footer {
     }
     .cta-container a {
         margin: 0;
-        line-height: ;
     }
     .product-wrap:last-of-type {
         display: none;
