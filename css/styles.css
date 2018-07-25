@@ -4,6 +4,23 @@
     --column-width: 904px;
 }
 
+@font-face {
+    font-family: 'Ginger Fox';
+    src: url('GingerFox-Regular.woff2') format('woff2'),
+        url('GingerFox-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ginger Fox';
+    src: url('GingerFox-SemiBold.woff2') format('woff2'),
+        url('GingerFox-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
 html {
     background-color: var(--gf-orange);
 }
