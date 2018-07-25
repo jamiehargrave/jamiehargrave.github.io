@@ -18,9 +18,9 @@ $(document).ready(function () {
     });
     $("#account-menu-control, #account-menu").hover(function () {
         $("#account-menu-wrap").toggle();
-        $("#account-menu-control").toggleClass('highlight');
+        $("#last-li").toggleClass('highlight');
     });
-    $('.back-to-top-wrap').click(function () {
+    $('.back-to-top').click(function () {
     $('html,body').animate({scrollTop:0},500);
     });
 });
