@@ -23,5 +23,12 @@ $(document).ready(function () {
     $('.back-to-top').click(function () {
     $('html,body').animate({scrollTop:0},500);
     });
+    
+    $('#search-tag').click(function () {
+        $('#search-box').toggleClass('search-box-active'); 
+        $('#search-tag').toggleClass('search-tag-active'); 
+        $('#search-tag').toggleClass('search-tag-anim');
+        $('#search-icon').toggleClass('search-icon-close');
+    });
 });
 
